@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Delivery App</string>
+
+    <string name="vegi_caption">VEGI CAPTION</string>
+    <string name="log_in_to_continue">Log in to continue</string>
+    <string name="username">   Username</string>
+    <string name="password">   Password</string>
+    <string name="log_in">Log in</string>
+    <string name="pending">Pending</string>
+    <string name="completed">Completed</string>
+    <string name="profile">Profile</string>
+    <string name="cash_on_delivery">Cash on delivery</string>
+    <string name="shipping_charges">Shipping Charges</string>
+    <string name="shipping_charge_is_include_in_total_amount">Shipping Charge is include in total amount</string>
+    <string name="start">Start</string>
+    <string name="complete">Complete</string>
+    <string name="hold">Hold</string>
+    <string name="enter_your_name">Enter your Name</string>
+    <string name="submit">Submit</string>
+    <string name="are_you_sure_you_want_to_logout">Are you sure you want to logout?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="completed_deliveries">Completed Deliveries</string>
+
+    <string name="here_are_your_deliveries">here are your deliveries</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="edit">Edit</string>
+    <string name="total_deliveries">Total Deliveries</string>
+    <string name="available">Available</string>
+    <string name="cash_to_pay">Cash to pay</string>
+    <string name="log_out">Log out</string>
+    <string name="i_got_money">I Got Money</string>
+    <string name="by_signing_in_you_agreeing_to_our">By signing in you agreeing to our</string>
+    <string name="terms_and_privacy_policy">Terms and Privacy Policy</string>
+    <string name="hold_this_order">Hold This Order?</string>
+    <string name="refused_to_attemp">Refused to Attemp</string>
+    <string name="not_at_home">Not At Home</string>
+    <string name="didn_t_paid">Didn\'t Paid</string>
+    <string name="address_not_found">Address Not Found</string>
+    <string name="hold_this_ordertext">Hold This Order</string>
+    <string name="cancel">Cancel</string>
+    <string name="enterusername">Enter username first</string>
+    <string name="enterpassword">Enter Password First</string>
+    <string name="dilogpermissonmsg">For using this app Location Permisson is required</string>
+    <string name="opensettins">Open Settings</string>
+    <string name="popupdes">Order is Cash On Delivery\nHas customer paid \n you full amount?</string>
+    <string name="popupdes2">Order Payment has been transferred online\nYou deliver the entire order to customer?</string>
+    <string name="customeraddressnotfound">Customer Address Not Found</string>
+    <string name="unknown">unknown Location</string>
+    <string name="hello">Hello ,</string>
+    <string name="permissonmsg">Write External Storage permission allows us to save files. Please allow this permission in App Settings.</string>
+    <string name="km"> Km</string>
+    <string name="quentity">Quantity </string>
+    <string name="profileupdatesuccessfully">Profile Updated Successfully</string>
+</resources>

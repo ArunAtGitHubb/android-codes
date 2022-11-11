@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="412dp"
+            android:layout_height="52dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.008"
+            tools:layout_editor_absoluteX="-1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:onClick="onclickBack"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                    app:tint="@color/color_white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvCustomerName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gilroybold"
+                            android:singleLine="true"
+                            android:textColor="@color/color_white"
+                            android:textSize="22sp"
+                            tools:text="Jesica Robinson" />
+
+                        <TextView
+                            android:id="@+id/tvOrderid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvCustomerName"
+                            android:fontFamily="@font/gsemibold"
+                            android:textColor="@color/color_white"
+                            android:textSize="14sp"
+                            tools:text="#FVGRT55678" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tvprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="20dp"
+                        android:fontFamily="@font/gilroybold"
+                        android:textColor="@color/color_white"
+                        android:textSize="20sp"
+                        tools:text="$350" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/continerlyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:clickable="true"
+            android:elevation="1dp"
+            android:orientation="vertical"
+            app:behavior_peekHeight="80dp"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_bottom_sheet"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20sp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@color/offwhite">
+
+                    <TextView
+                        android:id="@+id/tvorderid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/gilroymedium"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="5dp"
+                        android:text="#VEGI090877"
+                        android:textColor="@color/color_white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvdeliverytype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@+id/tvorderid"
+                        android:layout_toRightOf="@+id/tvorderid"
+                        android:background="@color/color_orange"
+                        android:fontFamily="@font/gilroymedium"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="5dp"
+                        android:text="@string/cash_on_delivery"
+                        android:textColor="#fff"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/swiperefresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/offwhite">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="595dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/offwhite"
+                    android:paddingBottom="20dp">
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="505dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="66dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/lytmain"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="10dp"
+                                android:orientation="vertical">
+
+
+                                <RelativeLayout
+                                    android:layout_width="372dp"
+                                    android:layout_height="228dp"
+                                    android:layout_marginHorizontal="10dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/imgUser"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_marginTop="86dp"
+                                        android:layout_marginBottom="62dp"
+                                        android:background="@drawable/bg_yellowring"
+                                        android:padding="3dp" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="20dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginBottom="128dp"
+                                        android:layout_toEndOf="@+id/imgUser"
+                                        android:layout_toRightOf="@+id/imgUser"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/cusName"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/gilroybold"
+                                            android:textColor="@color/color_black"
+                                            android:textSize="20sp"
+                                            tools:text="joseph Duo" />
+
+                                        <TextView
+                                            android:id="@+id/cusaddress1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/gilroymedium"
+                                            android:textColor="@color/color_black"
+                                            android:textSize="16sp"
+                                            tools:text="Mota varachha, SURAT" />
+
+                                        <TextView
+                                            android:id="@+id/cusaddress2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/tvaddress1"
+                                            android:fontFamily="@font/gilroymedium"
+                                            android:textSize="14sp"
+                                            tools:text="302, Green Plazza \nGolden Chowk" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="3dp"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <ImageView
+                                                android:layout_width="20dp"
+                                                android:layout_height="20dp"
+                                                android:background="@drawable/bg_yellowbtn"
+                                                android:padding="4dp"
+                                                android:src="@drawable/call"
+                                                app:tint="@color/color_white" />
+
+                                            <TextView
+                                                android:id="@+id/cusMobile"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginStart="5dp"
+                                                android:layout_marginLeft="5dp"
+                                                android:drawablePadding="5dp"
+                                                android:fontFamily="@font/gilroymedium"
+                                                android:gravity="center"
+                                                android:textSize="14sp"
+                                                tools:text="+91 7890789079" />
+
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="19dp"
+                                        android:layout_marginLeft="19dp"
+                                        android:layout_marginEnd="-102dp"
+                                        android:layout_marginBottom="13dp"
+                                        android:layout_toEndOf="@+id/imgUser"
+                                        android:layout_toRightOf="@+id/imgUser"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/resName"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/gilroybold"
+                                            android:textColor="@color/color_black"
+                                            android:textSize="20sp"
+                                            tools:text="joseph Duo" />
+
+                                        <TextView
+                                            android:id="@+id/resaddress1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/gilroymedium"
+                                            android:textColor="@color/color_black"
+                                            android:textSize="16sp"
+                                            tools:text="Mota varachha, SURAT" />
+
+                                        <TextView
+                                            android:id="@+id/resaddress2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/tvaddress1"
+                                            android:fontFamily="@font/gilroymedium"
+                                            android:textSize="14sp"
+                                            tools:text="302, Green Plazza \nGolden Chowk" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="3dp"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <ImageView
+                                                android:layout_width="20dp"
+                                                android:layout_height="20dp"
+                                                android:background="@drawable/bg_yellowbtn"
+                                                android:padding="4dp"
+                                                android:src="@drawable/call"
+                                                app:tint="@color/color_white" />
+
+                                            <TextView
+                                                android:id="@+id/resMobile"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginStart="5dp"
+                                                android:layout_marginLeft="5dp"
+                                                android:drawablePadding="5dp"
+                                                android:fontFamily="@font/gilroymedium"
+                                                android:gravity="center"
+                                                android:textSize="14sp"
+                                                tools:text="+91 7890789079" />
+
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height=".3dp"
+                                    android:layout_below="@+id/imgUser"
+                                    android:layout_marginHorizontal="20dp"
+                                    android:layout_marginVertical="15dp"
+                                    android:alpha=".7"
+                                    android:background="@color/light_gray" />
+
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvorderitems"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:nestedScrollingEnabled="true"
+                                    android:orientation="vertical"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                    tools:itemCount="3"
+                                    tools:listitem="@layout/item_products" />
+
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.core.widget.NestedScrollView>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

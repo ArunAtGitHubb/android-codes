@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_greadent">
+
+        <ImageView
+            android:id="@+id/tvvegi"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/delivery_boy_icon" />
+
+        <TextView
+            android:id="@+id/tvextra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvvegi"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/gilroybold"
+            android:text="@string/log_in_to_continue"
+            android:textColor="#fff"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:id="@+id/lytLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvextra"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/username"
+                android:fontFamily="@font/gilroymedium"
+                android:textColor="@color/color_white"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_whitround"
+                android:backgroundTint="@color/orange_white"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:singleLine="true"
+                android:textColor="@color/color_white"
+                android:textColorHint="@color/offwhite"
+                tools:hint="annie" />
+
+
+            <TextView
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/gilroymedium"
+                android:text="@string/password"
+                android:textColor="@color/color_white"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_whitround"
+                android:backgroundTint="@color/orange_white"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:singleLine="true"
+                android:textColor="@color/color_white" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:id="@+id/loginBtn"
+            android:layout_marginHorizontal="40dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lytLogin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_whitround"
+            android:fontFamily="@font/gilroybold"
+            android:backgroundTint="@color/color_white"
+            android:gravity="center"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="10dp"
+            android:text="@string/log_in"
+            android:textColor="@color/color_black"
+            android:textSize="18sp" />
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginBtn"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/gilroylight"
+                android:gravity="center"
+                android:text="@string/by_signing_in_you_agreeing_to_our"
+                android:textColor="@color/color_white" />
+
+            <TextView
+                android:id="@+id/tvTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gsemibold"
+                android:gravity="center"
+                android:text="@string/terms_and_privacy_policy"
+                android:textColor="@color/color_white" />
+
+        </LinearLayout>
+
+
+        <ProgressBar
+            android:id="@+id/pd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/color_white"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</layout>
